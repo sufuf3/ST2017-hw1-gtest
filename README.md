@@ -9,3 +9,9 @@
 7. cd ~/ST2017-hw1-gtest/gtest/make  
 8. make  
 9. mv gtest_main.a libgtest.a  
+
+## Add hw floder
+1. mkdir ~/ST2017-hw1-gtest/[hw]
+2. Add files
+3. g++ triangle.cpp test.cpp -I ../gtest/include -L ../gtest/make -lgtest -lpthread -o test
+4. ./test
