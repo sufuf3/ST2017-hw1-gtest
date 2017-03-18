@@ -19,15 +19,17 @@
 
 ## list
 
-**Triangle problems**
- - [x] Boundary value testing
- - [x] Equivalence class testing
- - [ ] decision table based testing 
-**NextDate problems**  
+**Triangle problems**  
  - [x] Boundary value testing  
- - [ ] Equivalence class testing
- - [ ] decision table based testing 
-**Commission problems**  
- - [ ] Boundary value testing
- - [ ] Equivalence class testing
- - [ ] decision table based testing
+ - [x] Equivalence class testing  
+ - [ ] decision table based testing   
+
+**NextDate problems**    
+ - [x] Boundary value testing   
+ - [ ] Equivalence class testing  
+ - [ ] decision table based testing   
+
+**Commission problems**    
+ - [ ] Boundary value testing  
+ - [ ] Equivalence class testing  
+ - [ ] decision table based testing  
