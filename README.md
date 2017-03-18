@@ -30,6 +30,6 @@
  - [ ] decision table based testing   
 
 **Commission problems**    
- - [ ] Boundary value testing  
+ - [x] Boundary value testing  
  - [ ] Equivalence class testing  
  - [ ] decision table based testing  
