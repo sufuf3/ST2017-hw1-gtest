@@ -12,6 +12,22 @@
 
 ## Add hw floder
 1. mkdir ~/ST2017-hw1-gtest/[hw]
-2. Add files
-3. g++ triangle.cpp test.cpp -I ../gtest/include -L ../gtest/make -lgtest -lpthread -o test
-4. ./test
+2. cd ~/ST2017-hw1-gtest/[hw]
+3. Add files
+4. g++ triangle.cpp test.cpp -I ../gtest/include -L ../gtest/make -lgtest -lpthread -o test
+5. ./test
+
+## list
+
+**Triangle problems**
+ - [x] Boundary value testing
+ - [x] Equivalence class testing
+ - [ ] decision table based testing 
+**NextDate problems**  
+ - [x] Boundary value testing  
+ - [ ] Equivalence class testing
+ - [ ] decision table based testing 
+**Commission problems**  
+ - [ ] Boundary value testing
+ - [ ] Equivalence class testing
+ - [ ] decision table based testing
