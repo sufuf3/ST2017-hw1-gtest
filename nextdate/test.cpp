@@ -56,11 +56,11 @@ TEST( NextDateTest, Equivalence ) {
 	ASSERT_EQ( 19960615 , nextdate(1996, 06, 14) ); // SN2
 	ASSERT_EQ( 20020615 , nextdate(2002, 06, 14) ); // SN3
 	ASSERT_EQ( 20000630 , nextdate(2000, 06, 29) ); // SN4
-	ASSERT_EQ( 19960630 , nextdate(1996, 06, 30) ); // SN5
+	ASSERT_EQ( 19960630 , nextdate(1996, 06, 29) ); // SN5
 	ASSERT_EQ( 20020630 , nextdate(2002, 06, 29) ); // SN6
-	ASSERT_EQ( INVALID_DATE , nextdate(2000, 6, 30) ); // SN7
-	ASSERT_EQ( INVALID_DATE , nextdate(1996, 6, 30) ); // SN8
-	ASSERT_EQ( INVALID_DATE , nextdate(2002, 6, 30) ); // SN9
+	ASSERT_EQ( 20000701 , nextdate(2000, 6, 30) ); // SN7
+	ASSERT_EQ( 19960701 , nextdate(1996, 6, 30) ); // SN8
+	ASSERT_EQ( 20020701 , nextdate(2002, 6, 30) ); // SN9
 	ASSERT_EQ( INVALID_DATE , nextdate(1996, 6, 31) ); // SN11
 	ASSERT_EQ( INVALID_DATE , nextdate(2002, 6, 31) ); // SN12
 	ASSERT_EQ( 20000715 , nextdate(2000, 07, 14) ); // SN13
@@ -71,4 +71,5 @@ TEST( NextDateTest, Equivalence ) {
 	ASSERT_EQ( 20020730 , nextdate(2002, 07, 29) ); // SN18
 	ASSERT_EQ( 20000731 , nextdate(2000, 07, 30) ); // SN19
 	ASSERT_EQ( 19960731 , nextdate(1996, 07, 30) ); // SN20
+	//http://www.softwaretestinggenius.com/tutorial-7-to-generate-equivalence-class-test-cases-for-the-next-date-function
 }

@@ -4,6 +4,8 @@
 const int D_MAX[M_MAX + 1] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 int nextdate( int yy, int mm, int dd ) {
+	if( yy < Y_MIN || yy > Y_MAX || mm < M_MIN || mm > M_MAX)
+		return INVALID_DATE;
 	//31days
 	if( mm == 1 || mm == 3 || mm == 5 || mm == 7 || mm == 8 || mm == 10 || mm == 12 ){
 		if(dd >= 1 && dd<31)
@@ -32,6 +34,27 @@ int nextdate( int yy, int mm, int dd ) {
 	else if(mm == 2){
 		if(dd >= 1 && dd<28)
 			dd++;
+		else if( dd == 28 ){
+			if( (yy % 4 == 0 && yy % 100 != 0 ) || yy % 400 == 0 ){
+				dd++;
+			}
+			else{
+				dd = 1;
+				mm = 3;
+			}
+		}
+		else if( dd == 29 ){
+			if( (yy % 4 == 0 && yy % 100 != 0 ) || yy % 400 == 0 ){
+				dd = 1;
+				mm = 3;
+			}
+			else{
+				return INVALID_DATE;
+			}
+		}
+		else{
+			return INVALID_DATE;
+		}
 	}
 	return (yy * 10000) + (mm * 100) + (dd);
 }
