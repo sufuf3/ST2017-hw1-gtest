@@ -52,9 +52,17 @@ TEST( TriangleTest, Equivalence ) {
 	//ref: http://www.softwaretestinggenius.com/tutorial-6-to-generate-equivalence-class-test-cases-for-the-triangle-problem
 }
 
-//TEST( TriangleTest, DecisionTable ) {
+TEST( TriangleTest, DecisionTable ) {
+	ASSERT_EQ( TYPE_NOTTRIANGLE, triangle_type(4, 1, 2) );
+	ASSERT_EQ( TYPE_NOTTRIANGLE, triangle_type(1, 4, 2) );
+	ASSERT_EQ( TYPE_NOTTRIANGLE, triangle_type(1, 2, 4) );
+	ASSERT_EQ( TYPE_EQUILATERAL, triangle_type(5, 5, 5) );
+	ASSERT_EQ( TYPE_ISOSCELES, triangle_type(2, 2, 3) );
+	ASSERT_EQ( TYPE_ISOSCELES, triangle_type(3, 2, 2) );
+	ASSERT_EQ( TYPE_ISOSCELES, triangle_type(2, 3, 2) );
+	ASSERT_EQ( TYPE_SCALENE, triangle_type(3, 4, 5) );
 
-//}
+}
 
 
 int main( int argc, char *argv[] ) {
