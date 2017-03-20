@@ -21,3 +21,24 @@ TEST( CommissionTest, NormalBoundary ) {
 	ASSERT_EQ( 3900 , count_commission(35, 40, 45) ); 
 	//ref: http://www.softwaretestinggenius.com/tutorial-4-to-generate-bva-test-cases-for-the-salesman-commision-calculation-program
 }
+
+TEST( CommissionTest, Equivalence ) {
+	// Weak Normal & Strong Normal Equivalence Class
+	ASSERT_EQ( 3900 , count_commission(35, 40, 45) ); 
+	//Weak Robust Equivalence Class
+	ASSERT_EQ( INVALID_SALE , count_commission(0, 40, 45) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(71, 40, 45) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(35, 0, 45) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(35, 81, 45) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(35, 40, 0) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(35, 40, 91) ); 
+	//Strong Robust Equivalence Class
+	ASSERT_EQ( INVALID_SALE , count_commission(-1, 40, 45) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(35, -1, 45) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(35, 40, -1) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(-1, -1, 45) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(-1, 40, -1) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(35, -1, -1) ); 
+	ASSERT_EQ( INVALID_SALE , count_commission(-1, -1, -1) ); 
+	//http://www.softwaretestinggenius.com/tutorial-8-to-generate-equivalence-class-test-cases-for-the-salesman-commission-calculation-program
+}

@@ -31,5 +31,5 @@
 
 **Commission problems**    
  - [x] Boundary value testing  
- - [ ] Equivalence class testing  
+ - [x] Equivalence class testing  
  - [ ] decision table based testing  
