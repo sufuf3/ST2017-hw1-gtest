@@ -9,7 +9,7 @@ Robust values {0,201}
 #include "triangle.hpp"
 
 
-TEST( triangle_type, NormalBoundary ) {
+TEST( TriangleTest, NormalBoundary ) {
 	//one at min bound
 	ASSERT_EQ( TYPE_ISOSCELES, triangle_type(MIN, 100, 100) );
 	ASSERT_EQ( TYPE_ISOSCELES, triangle_type(100, MIN, 100) );
