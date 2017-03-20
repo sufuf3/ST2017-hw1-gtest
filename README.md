@@ -27,7 +27,7 @@
 **NextDate problems**    
  - [x] Boundary value testing   
  - [x] Equivalence class testing  
- - [ ] decision table based testing   
+ - [x] decision table based testing   
 
 **Commission problems**    
  - [x] Boundary value testing  

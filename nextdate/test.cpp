@@ -73,3 +73,26 @@ TEST( NextDateTest, Equivalence ) {
 	ASSERT_EQ( 19960731 , nextdate(1996, 07, 30) ); // SN20
 	//http://www.softwaretestinggenius.com/tutorial-7-to-generate-equivalence-class-test-cases-for-the-next-date-function
 }
+
+TEST( NextDateTest, DecisionTable ) {
+	ASSERT_EQ( 20010416 , nextdate(2001, 04, 15) ); 
+	ASSERT_EQ( 20010501 , nextdate(2001, 04, 30) ); 
+	ASSERT_EQ( INVALID_DATE , nextdate(2001, 04, 31) ); 
+	ASSERT_EQ( 20010116 , nextdate(2001, 01, 15) ); 
+	ASSERT_EQ( 20010201 , nextdate(2001, 01, 31) ); 
+	ASSERT_EQ( 20011216 , nextdate(2001, 12, 15) ); 
+	ASSERT_EQ( 20020101 , nextdate(2001, 12, 31) ); 
+	ASSERT_EQ( 20010216 , nextdate(2001, 02, 15) ); 
+	ASSERT_EQ( 20040229 , nextdate(2004, 02, 28) ); 
+	ASSERT_EQ( 20010301 , nextdate(2001, 02, 28) ); 
+	ASSERT_EQ( 20040301 , nextdate(2004, 02, 29) ); 
+	ASSERT_EQ( INVALID_DATE , nextdate(2001, 02, 29) ); 
+	ASSERT_EQ( INVALID_DATE , nextdate(2001, 02, 30) ); 
+	
+}
+
+int main( int argc, char *argv[] ) {
+        ::testing::InitGoogleTest(&argc, argv);
+        return RUN_ALL_TESTS();
+}
+
